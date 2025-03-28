@@ -25,10 +25,9 @@ async function main() {
         .send()
         .deployed();
 
-    console.log(`Token deployed at ${counter.address.toString()}`);
+    console.log(`counter deployed at ${counter.address.toString()}`);
 
-    const addresses = { token: counter.address.toString() };
+    const addresses = { counter: counter.address.toString() };
     writeFileSync('addresses.json', JSON.stringify(addresses, null, 2));
 }
-console.log("hi")
 await main();
