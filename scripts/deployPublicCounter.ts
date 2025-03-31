@@ -1,4 +1,4 @@
-import { CounterContractArtifact } from '../aztec-private-counter/contracts/counter/src/artifacts/Counter'
+import { CounterContractArtifact } from '../aztec-public-counter/public_counter/src/artifacts/Counter'
 import { createPXEClient, waitForPXE, Contract } from "@aztec/aztec.js"
 import { getInitialTestAccountsWallets } from '@aztec/accounts/testing';
 
@@ -28,6 +28,6 @@ async function main() {
     console.log(`counter deployed at ${counter.address.toString()}`);
 
     const addresses = { counter: counter.address.toString() };
-    writeFileSync('addresses.json', JSON.stringify(addresses, null, 2));
+    writeFileSync('PublicCounterAddresses.json', JSON.stringify(addresses, null, 2));
 }
 await main();

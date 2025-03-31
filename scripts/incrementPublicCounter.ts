@@ -1,6 +1,6 @@
 import { AztecAddress, Contract,createPXEClient,waitForPXE, Fr, GrumpkinScalar  } from '@aztec/aztec.js';
-import { CounterContractArtifact } from '../aztec-private-counter/contracts/counter/src/artifacts/Counter'
-import {counter as contractAddress} from "../addresses.json";
+import { CounterContractArtifact } from '../aztec-public-counter/public_counter/src/artifacts/Counter'
+import {counter as contractAddress} from "../PublicCounterAddresses.json";
 import { getInitialTestAccountsWallets,getDeployedTestAccountsWallets } from '@aztec/accounts/testing';
 import { getSchnorrAccount } from '@aztec/accounts/schnorr';
 
