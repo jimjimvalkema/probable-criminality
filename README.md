@@ -40,6 +40,8 @@ sudo groupadd docker;
 sudo usermod -aG docker $USER;
 source ~/.bashrc;
 ```
+if it still is broken try: https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue
+
 
 ### [install aztec sand box](https://docs.aztec.network/developers/getting_started#install-the-sandbox):  
 #### install  
@@ -57,7 +59,8 @@ Its just a noir and aztec is a library! And type is now `type = "contract"`
 note there is a bug where docker makes all new files owned by root
 just do `sudo chown -R $USER:docker *` every time aztec makes files
 ```shell
-aztec-nargo new 
+aztec-nargo new --contract counter
+
 ```
 
 
@@ -79,3 +82,5 @@ deploy (i used bun because i still don't know how to use typescript with node lm
 ```shell
 bun run  scripts/deployCounter
 ```
+
+`VERSION=0.82.2 aztec start --sandbox`

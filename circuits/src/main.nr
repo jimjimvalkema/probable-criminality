@@ -40,7 +40,7 @@ fn test_pedersen_hash() {
 
 // this is probably not safe?? 
 fn encrypt_poseidon(message: Field, secret: Field) -> Field {
-    poseidon::bn254::hash_1([secret]) + message
+    message + poseidon::bn254::hash_1([secret]) 
 }
 
 fn decrypt_poseidon(encrypted_message: Field, secret: Field) -> Field {
