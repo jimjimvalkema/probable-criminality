@@ -2,9 +2,11 @@
     "cSpell.words": [
         "codegen",
         "curvepoint",
+        "Grumpkin",
         "lmao",
         "nargo",
         "pedersen",
-        "preimg"
+        "preimg",
+        "schnorr"
     ]
 }
